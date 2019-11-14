@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/selected_top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/back_icon"/>
+
+        <TextView
+            android:id="@+id/selected_menu_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="육쌈물냉면"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/selected_food_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/noodle_icon"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/selected_top_menu"
+        />
+
+    <GridLayout
+        android:id="@+id/selected_review_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:useDefaultMargins="false"
+        android:layout_below="@+id/selected_food_image"
+        >
+        <Button
+            android:id="@+id/selected_review_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:text="리뷰"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            />
+        <Button
+            android:id="@+id/selected_info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:text="정보"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:useDefaultMargins="false"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/selected_cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selected_menu_cart_background"
+            android:text="장바구니"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            />
+        <Button
+            android:id="@+id/selected_order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:text="바로구매"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            />
+    </GridLayout>
+</RelativeLayout>
